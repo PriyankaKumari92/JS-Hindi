@@ -27,9 +27,9 @@ let isLoggedIn = false
 //non permitive datatype
 
 //object
-//function
 
 console.log(typeof name)
-console.log(typeof null)
+console.log(typeof null) // object
+console.log(typeof undefined) // undefine
 
 // type of when we need to check for null = object, undefined = undeifined 
