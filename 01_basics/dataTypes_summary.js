@@ -39,3 +39,38 @@ let myFunction = function(){
 }                                     // function
 
 console.log(typeof myFunction)
+
+
+
+//****************************************************************************** */
+
+//stack (primitive datatypes);  Heap (Non primitive datatype)
+
+let myChannel = "hiteshcoudary.com"
+ let anotherChannel = myChannel
+ anotherChannel = "chaiandcode"
+
+ console.log(myChannel)
+
+ console.log(anotherChannel)
+
+ // call by value me value change hota 
+
+ // HEAP
+
+ let userOne = {
+   
+    age: 32,
+    email: "priyanka@gmail.com",
+ }
+
+ let userTwo = userOne
+
+ userTwo.email = "pksingh230292@gmail.com"
+
+ console.log(userOne.email)
+ console.log(userTwo.email)
+
+
+
+// call by refrence change the value of userone refrence 
