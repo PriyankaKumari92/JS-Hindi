@@ -50,13 +50,13 @@ console.log(Math.floor(Date.now()/1000));
 
 let newDate = new Date()
 console.log(newDate);
-console.log(newDate.getMonth() + 1) // if having confusion to count month the write in this formate
+console.log(newDate.getMonth() + 1) // if having confusion to count month bcz it count start from 0 then write in this formate
 
 console.log(newDate.getDay());
 
 // if writte in good format 
 
-console.log(` ${newDate.getDay() } and the time is ${newDate.getTime()}`)
+console.log(` ${newDate.getDay()} and the time is ${newDate.getTime()}`)
 
 // as function and try to get customized time value 
 

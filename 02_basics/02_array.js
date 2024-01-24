@@ -6,7 +6,7 @@ const dc_heros = ["superman", "flash", "batman"]
 // console.log(marvel_heros);
 // console.log(marvel_heros[3][1]);
 
-// marvel_heros.concat(dc_heros)
+// marvel_heros.concat(dc_heros) => not showing output due concat alway return so need to store in new variable 
 // console.log(marvel_heros);
 
 // not showing exact thing need to move this marvel_heros.concat(dc_heros) in another variable
@@ -18,7 +18,7 @@ console.log(allHeros);
 const new_all_heros = [...marvel_heros, ...dc_heros]
 console.log(new_all_heros);
 
-// that is spread method which are use to spread that all element in a n array just like glass 
+// that is spread method which are use to spread that all element in a n array just like through a glass 
 
 const another_array = [1, 2, 3, [4, 5], 6, [7, 8, [9, 4, 5,]], 9]
 

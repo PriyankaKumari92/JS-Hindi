@@ -3,11 +3,11 @@ const name = "Priyanka"
 const repoCount = 5
 
 // console.log( name + repoCount + " Value ")  
-//  its not a good way to write code
+//  its not a good way to write the code
 
-console.log(`Hello my is ${name} and  my repo count is ${repoCount}`);
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
-// ITS A GOOD WAY TO WIRTE CODE
+// ITS A GOOD WAY TO WIRTE a CODE
 
 const gameName = new String("priyankasingh")
 
@@ -35,7 +35,7 @@ const newString = gameName.substring(-10, 4)
 console.log(newString);
 
 // priy : -10 subString not clounting negative value it start from 0 only 
-// y: slice cpount negative value also and start from reverse so rember that 
+// y: slice count negative value also and start from reverse so rember that 
 
 const anotherString = gameName.slice(-10, 4)
 console.log(anotherString);

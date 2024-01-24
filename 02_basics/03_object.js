@@ -12,14 +12,14 @@ const JsUser = {
     location: "varanasi",
     email: "priyanka@123.com",
     isLoggedIn: true,
-    lastLoginDays: ["Monday"],
+    lastLoginDays: ["Monday", "Friday"],
     [mySym]: "mykey1"
 }
 
 console.log(JsUser.email);
 console.log(JsUser["email"]);  // keys always work as string and it is good way to print with []
 
-// for example print full nane
+// for example print full nane we can not use and print that value with "."
 
 console.log(JsUser["full name"]);
 
