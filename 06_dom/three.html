@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Chai, initial-scale=1.0">
+    <title>chai our code</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    
+</body>
+<script>
+
+// how to create element add one div in body and name : cahi or code in two way
+
+const div = document.createElement("div")
+console.log(div)
+div.className = "main"
+div.id = Math.random() * 10 +1
+
+// how to set attaribute
+ div.setAttribute("title", "genereted title")
+ div.style.color = "green"
+ div.style.padding = "12px"
+ //div.innerText = "Chai Our Code"
+
+ const addText = document.createTextNode("Chai our code")
+ div.appendChild(addText)
+
+ document.body.appendChild(div)
+
+
+
+
+</script>
+</html>
