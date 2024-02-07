@@ -1,27 +1,156 @@
-// dom : document object manupulation 
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
+    <style>
+
+      .bg-black {
+           background-color: #212121;
+           color: aliceblue;
+      }
+    </style>
 </head>
-<body>
-      <div class="bg-black">
-        <h1 class="heading"> hello world</h1>
+<body class="bg-black">
+      <div>
+        <h1 id="title" class="heading"> Dom learning chai our code<span style="display: none;"> test text</span></h1>
+
+        <h2>Lorem ipsum dolor sit amet </h2>
+        <h2>Lorem ipsum dolor sit amet </h2>
+        <h2>Lorem ipsum dolor sit amet </h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-
-
+      <input type="password"  id="" name="password"></input>
+      
+      
+      <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
+      </ul>
+        
       </div>
-</body>
-</html>
+    </body>
+    </html>
+    
+    <!-- dom : document object manupulation  -->
+ <!-- how to manupulate 
+ https://en.m.wikipedia.org/wiki/Brendan_Eich
+ i want to change that heading 
 
-// how to manupulate 
-// https://en.m.wikipedia.org/wiki/Brendan_Eich
-// i want to change that heading 
+ inspect then open console
 
-// inspect then open console
+document.getElementById("firstHeading").innerHTML = " <h1> chai or code</h1>"
 
-//document.getElementById("firstHeading").innerHTML = " <h1> chai or code</h1>"
+ stucture to acess the doc file -->
 
-// stucture to acess the doc file
+
+ <!-- document.getElementById("title")
+<h1 id=​"title" class=​"heading">​ Dom learning chai our code​</h1>​
+document.getElementById("title").id
+'title'
+document.getElementById("title").className
+'heading'
+document.getElementById("title").class
+undefined
+document.getElementById("title").getAttribute()
+VM324:1 Uncaught TypeError: Failed to execute 'getAttribute' on 'Element': 1 argument required, but only 0 present.
+    at <anonymous>:1:34
+(anonymous) @ VM324:1
+document.getElementById("title").getAttribute("id")
+'title'
+document.getElementById("title").getAttribute("class")
+'heading'
+
+how to set attaribute by dom
+document.getElementById("title").setAttribute("class", "test")
+undefined
+ document.getElementById("title").setAttribute("class", "test heading") -->
+
+
+ <!-- how to store in variable and then change css by dom on title
+
+ const title = document.getElementById("title")
+
+title
+<h1 id=​"title" class=​"test heading">​ Dom learning chai our code​</h1>​
+
+title.style.backgroundColor = "green"
+'green'
+title.style.padding = "15px"
+title.style.borderRadius = "10px" -->
+
+<!-- 
+diference beetween innerText and tesxContent and innerHTML -->
+
+<!-- 1ST TEST: 
+title.textContent
+' Dom learning chai our code test text'
+title.innerText
+'Dom learning chai our code test text'
+title.innerHTML
+' Dom learning chai our code<span> test text</span>' -->
+
+<!-- 
+add style on span then check 
+
+title.innerHTML
+' Dom learning chai our code<span style="display: none;"> test text</span>'
+title.textContent
+' Dom learning chai our code test text'
+title.innerText
+'Dom learning chai our code' -->
+
+<!-- how to change li style and text
+document.querySelector("ul")
+<ul>​…​</ul>​
+document.querySelector("li")
+<li>​…​</li>​
+const myul = document.querySelector("ul")
+undefined
+const myli = document.querySelector("li")
+undefined
+myli.style.backgroundColor = "gree"
+'gree'
+myli.style.backgroundColor = "green"
+'green'
+myli.style.padding = "10px"
+'10px'
+myli.style.borderRadius = "10px"
+'10px'
+myli.innerHTML = "five"
+'five' -->
+
+ <!-- nodelist : how to accsess all list in one time by using foreach loop
+ const tempList = document.querySelectorAll("li")
+
+tempList.forEach(function (l) {
+    l.style.backgroundColor = "green"
+}) -->
+
+<!-- HTML COLLECTION : HOW TO CHANGE IN ARRAY  -->
+
+<!-- document.getElementsByClassName("list-item")
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const tempClassList = document.getElementsByClassName("list-item")
+undefined
+
+Array.from(tempClassList)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const myConvertedArr = Array.from(tempClassList)
+
+myConvertedArr.forEach(function (li){
+    li.style.color = "orange"
+}) -->
+
+<!-- https://en.wikipedia.org/wiki/JavaScript  
+dom on all heading 
+
+
+classmod.forEach(function (h){
+  h.style.color ="green";
+  h.style.backgroundColor = "orange"
+}) -->
