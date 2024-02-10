@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>DOM | CHAI OR CODE</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+
+  <ul class="language">
+     <li>Javascript</li>
+    </ul>
+</body>
+<script>
+ 
+    // how add li by using dom : by traversing method
+    
+    function addLang(langName) {
+        // how store created element
+        const li = document.createElement('li')
+        // how to give language name 
+        li.innerHTML = `${langName}`
+        // how to acess that perticulor place to append that child
+        document.querySelector('.language').appendChild(li)
+    
+    }
+    
+    addLang("Python")
+    addLang("CPP")
+    
+
+    // HOW TO ADD ELEMENT IN OPTIMIZED WAY : direct add on last text node without triversing 
+
+function addOptiLang(langName) {
+
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+    
+}
+  
+addOptiLang("Java")
+addOptiLang("React-js")
+
+
+// how to edit second child : Python => Mojo
+
+// this method also work by traversing 
+const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "Mojo"
+
+    // its an optimized way 
+    const newLi = document.querySelector("li:nth-child(2)")
+    newLi.textContent = "Mojo"
+
+    secondLang.replaceWith(newLi)
+
+
+    // edit fisrt child : Javascript => Typescript  by using outerHTML
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = "<li>Typescript</li>"
+
+    // how to remove last element : React-js
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+    </script>
+
+
+</html>
